@@ -1,8 +1,12 @@
 pipeline:
-        build:
-                image: golang:alpine
-                commands:
-                        - pwd
-                        - ls
-                        - CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app .
-                        - ./app
+  test:
+    image: golang:alpine
+    commands:
+      - go test
+  build:
+    image: golang:alpine
+    commands:
+      - pwd
+      - ls
+      - CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app .
+      - ./app
