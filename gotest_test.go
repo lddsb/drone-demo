@@ -13,10 +13,9 @@ func TestDivision1(t *testing.T) {
 }
 
 func TestDivision2(t *testing.T) {
-	t.Error("失败的用例！")
-	// res, err := Division(10, 0)
-	// if err != nil {
-	// 	t.Error(err)
-	// }
-	// t.Log("result: ", res)
+	res, err := Division(10, 0)
+	if err != nil {
+		t.Log("0除正常处理")
+	}
+	t.Log("result: ", res)
 }
