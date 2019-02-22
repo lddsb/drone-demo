@@ -4,18 +4,17 @@ import (
 	"testing"
 )
 
-func TestDivision1(t *testing.T) {
-	if i, e := Division(6, 2); i != 3 || e != nil {
-		t.Error("除法函数测试没通过")
-	} else {
-		t.Log("第一个测试通过了！")
+func TestDivision(t *testing.T) {
+	_, err := Division(10, 0)
+	if err == nil {
+		t.Error("0除异常没有处理！")
 	}
-}
-
-func TestDivision2(t *testing.T) {
-	res, err := Division(10, 0)
+	res, err := Division(10, 2)
 	if err != nil {
-		t.Log("0除正常处理")
+		t.Error("除法异常！", err)
 	}
-	t.Log("result: ", res)
+
+	if res != 5 {
+		t.Error("除法处理逻辑错误！")
+	}
 }
