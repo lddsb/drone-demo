@@ -1,0 +1,1 @@
+[![codecov](https://codecov.io/gh/lddsb/drone-demo/branch/master/graph/badge.svg)](https://codecov.io/gh/lddsb/drone-demo) [![Build Status](https://drone.lddsb.com/api/badges/lddsb/drone-demo/status.svg)](https://drone.lddsb.com/lddsb/drone-demo)
