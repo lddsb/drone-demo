@@ -10,7 +10,4 @@ steps:
       requred: true
       files:
         - test.py
-        - __ini__.py
-      paths:
-        - ./
-        - awesome
+        - awesome/__ini__.py
