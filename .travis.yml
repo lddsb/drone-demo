@@ -1,2 +1,2 @@
 language: go
-go: latest
+go: 1.11.5
