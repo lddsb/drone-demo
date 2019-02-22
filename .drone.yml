@@ -8,5 +8,5 @@ steps:
     settings:
       token: b230c554-0e2a-4ac0-b5bd-f0cd3be05592
       files:
-        - '*.go'
+        - '*'
       requred: true
