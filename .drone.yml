@@ -1,0 +1,13 @@
+---
+kind: pipeline
+name: default
+
+steps:
+  - name: test
+    image: golang
+    commands:
+      - go test -race -coverprofile=coverage.txt -covermode=atomic
+  - name: codecov
+    image: plugins/codecov
+    settings:
+      token: b230c554-0e2a-4ac0-b5bd-f0cd3be05592
