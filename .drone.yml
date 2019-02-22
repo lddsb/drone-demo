@@ -5,4 +5,5 @@ name: default
 steps:
   - name: codecov
     image: robertstettner/drone-codecov
-    token: b230c554-0e2a-4ac0-b5bd-f0cd3be05592
+    settings:
+      token: b230c554-0e2a-4ac0-b5bd-f0cd3be05592
