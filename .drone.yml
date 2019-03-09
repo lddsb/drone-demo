@@ -15,3 +15,5 @@ steps:
 trigger:
   event:
     - tag
+  branch:
+    - master
