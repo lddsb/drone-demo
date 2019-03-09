@@ -1,19 +1,20 @@
 ---
 kind: pipeline
-name: default
+name: testing
 
 steps:
   - name: test
-    image: golang
+    pull: always
+    image: golang:alpine
     commands:
-      - go test -race -coverprofile=coverage.txt -covermode=atomic
+      - apke add make
+      - make test
+      - make coverage
   - name: codecov
     image: plugins/codecov
     settings:
       token: b230c554-0e2a-4ac0-b5bd-f0cd3be05592
 
 trigger:
-  event:
-    - tag
   branch:
     - master
