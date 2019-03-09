@@ -7,7 +7,7 @@ steps:
     pull: always
     image: golang:alpine
     commands:
-      - apke add make
+      - apk add make
       - make test
       - make coverage
   - name: codecov
