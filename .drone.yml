@@ -16,32 +16,6 @@ steps:
     settings:
       token: b230c554-0e2a-4ac0-b5bd-f0cd3be05592
 
-  - name: golang
-    image: golang
-    commands:
-      - echo $HOST
-      - echo $OLD_HOST
-    environment:
-      HOST:
-        from_secret: host
-      OLD_HOST:
-        from_secret: old_host
-
 trigger:
   branch:
     - master
-
----
-kind: secret
-name: host
-get:
-  path: secret/data/common
-  name: dev_host
-
----
-kind: secret
-
-external_data:
-  old_host:
-    path: secret/data/common
-    name: dev_host
